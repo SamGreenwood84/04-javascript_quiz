@@ -94,3 +94,52 @@ function startQuiz() {
       endQuiz();
     }
   }
+//Function to check the answers
+  function handleChoiceClick(event) {
+    checkAnswer(event.target.textContent);
+  }
+  function checkAnswer(userChoice) {
+    var currentQuestion = questions[currentQuestionIndex];
+  
+    if (userChoice === currentQuestion.correctAnswer) {
+      correctCount++;
+      showAlert("Correct!", function () {});
+      console.log("Correct!", correctCount);
+    } else {
+      incorrectCount++;
+      // Deduct 15 seconds for incorrect answers
+      timeLeft -= 15;
+      if (timeLeft < 0) {
+        timeLeft = 0;
+      }
+      showAlert("Incorrect!", function () {
+        setTimeout(function () {
+          if (correctCount + incorrectCount === 3) {
+            clearCounts();
+          }
+        }, 7000);
+        console.log("Incorrect!", incorrectCount);
+      });
+    }
+  }
+
+  //Function to show the final container once all three questions are answered
+  function showFinalContainer() {
+    hideAllContainers();
+    finalContainer.classList.remove("hide");
+    clearInterval(timerInterval);
+  }
+  //Function to update timer and log timeLeft as the score
+  function updateTimer() {
+    if (timeLeft <= 0) {
+      endQuiz();
+    } else {
+      timerElement.textContent = timeLeft;
+      timeLeft--;
+    }
+  }
+  //Function to hide the containers once the high scores container appear
+  function hideAllContainers() {
+    var allContainers = [q1Container, q2Container, q3Container, finalContainer];
+    allContainers.forEach((container) => container.classList.add("hide"));
+  }
