@@ -236,7 +236,7 @@ function displayHighScores() {
     if (correctCount >= 2) {
       resultElement.textContent = `You Win! You answered ${correctCount} out of ${questions.length} correctly!`;
     } else {
-      resultElement.textContent = `You Lose! You answered ${correctCount} out of ${questions.length} correctly!`;
+      resultElement.textContent = `You Lose! Times Up!`;
     }
   }
   //Function to callback the messages
