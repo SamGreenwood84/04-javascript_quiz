@@ -68,3 +68,18 @@ function startQuiz() {
   function startTimer() {
     timerInterval = setInterval(updateTimer, 1000);
   }
+  //Added function to show the next questions and choices once the series of next buttons are clicked
+  function showQuestion() {
+    var currentQuestion = questions[currentQuestionIndex];
+    var currentQuestionContainer = document.querySelector(`#q${currentQuestionIndex + 1}-container`);
+    var currentChoicesContainer = document.querySelector(`#q${currentQuestionIndex + 1}-container .btn-group`);
+  
+    hideAllContainers();
+    currentQuestionContainer.classList.remove("hide");
+  
+    var choiceButtons = currentChoicesContainer.querySelectorAll("button");
+    for (var i = 0; i < choiceButtons.length; i++) {
+      choiceButtons[i].textContent = currentQuestion.choices[i];
+      choiceButtons[i].addEventListener("click", handleChoiceClick);
+    }
+  }
