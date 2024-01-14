@@ -1,0 +1,15 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-color: aliceblue;
+  }
+  
+  #quiz-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  #quiz-container h1 {
+    text-align: center;
+    color: black;
+  }
