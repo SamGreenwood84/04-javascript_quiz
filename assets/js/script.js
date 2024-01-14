@@ -163,4 +163,31 @@ function startQuiz() {
     displayHighScores();
     highScoresContainer.classList.remove("hide");
   }
+//Function to reset the quiz once "Try again" is clicked
+  function resetQuiz() {
+    hideAllContainers();
+    startContainer.classList.remove("hide");
+    resultElement.textContent = "";
+    clearCounts();
+  
+//Clear all alert elements from the DOM
+    var existingAlerts = document.querySelectorAll("div.alert");
+    existingAlerts.forEach(function (alert) {
+      alert.remove();
+    });
+  
+    currentQuestionIndex = 0;
+    timeLeft = 45;
+  }
+  //Function to clear the correct and incorrect counts once the "Try again" button is clicked
+  function clearCounts() {
+    correctCount = 0;
+    incorrectCount = 0;
+  }
+ //Function to refresh the scores from local storage once the "Refresh Scores" button is clicked 
+  function refreshScores() {
+    localStorage.removeItem("highScores");
+    displayHighScores();
+    refreshScoresBtn.classList.add("hide");
+  }
   
