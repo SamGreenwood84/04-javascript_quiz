@@ -228,8 +228,24 @@ function displayHighScores() {
   }
   //Function to callback the messages
   function showAlert(message, callback, timeout = 500) {
-    alertElement = document.createElement("div");
+    let alertElement = document.createElement("div");
     alertElement.textContent = message;
     document.body.appendChild(alertElement);
   
+    // Add click event listener to the alert to dismiss it
+    alertElement.addEventListener("click", function () {
+      alertElement.remove();
+      if (typeof callback === "function") {
+        callback(); // Call the provided callback function
+      }
+    });
+  
+    setTimeout(function () {
+      if (alertElement) {
+        alertElement.remove();
+        if (typeof callback === "function") {
+          callback();
+        }
+      }
+    }, timeout);
   }
