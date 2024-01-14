@@ -56,3 +56,15 @@ nextBtn3.addEventListener("click", showFinalContainer);
 inputForm.addEventListener("submit", handleFormSubmit);
 restartQuizBtn.addEventListener("click", resetQuiz);
 refreshScoresBtn.addEventListener("click", refreshScores);
+
+// Start container functions
+function startQuiz() {
+    startContainer.classList.add("hide");
+    q1Container.classList.remove("hide");
+    showQuestion();
+    startTimer();
+  }
+  
+  function startTimer() {
+    timerInterval = setInterval(updateTimer, 1000);
+  }
