@@ -23,8 +23,8 @@ The USER wants to challenge their knowledge of Javascript by taking a short quiz
 
 
 
-
-
+[highscore to local storage reference](https://stackoverflow.com/questions/29370017/adding-a-high-score-to-local-storage)
+![Alt text](<assets/images/highscore to local storage reference-stackoverflow.png>)
 
 [input form reference](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit)
 ![Alt text](<assets/images/input form reference-w3schools.png>)

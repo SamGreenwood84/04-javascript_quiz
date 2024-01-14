@@ -190,4 +190,28 @@ function startQuiz() {
     displayHighScores();
     refreshScoresBtn.classList.add("hide");
   }
+//Function to display the Top 10 high scores in local storage. Score will not be saved in not in Top 10
+function displayHighScores() {
+    var highScoresContainer = document.querySelector("#high-scores");
+    highScoresContainer.innerHTML = "<h2>High Scores</h2>";
   
+    highScoresContainer.classList.remove("hide");
+    finalContainer.classList.remove("hide");
+  
+    var userScores = JSON.parse(localStorage.getItem("highScores")) || [];
+  
+    if (userScores.length > 0) {
+      userScores.sort((a, b) => b.score - a.score);
+  
+      var top10Scores = userScores.slice(0, 10);
+  
+      top10Scores.forEach(function (scoreData, index) {
+        var scoreItem = document.createElement("div");
+        scoreItem.textContent = `${index + 1}. ${scoreData.initials} - ${scoreData.score}`;
+        highScoresContainer.appendChild(scoreItem);
+      });
+  
+      restartQuizBtn.classList.remove("hide");
+      refreshScoresBtn.classList.remove("hide");
+    }
+  }
