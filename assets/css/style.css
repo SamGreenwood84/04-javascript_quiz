@@ -13,3 +13,27 @@ body {
     text-align: center;
     color: black;
   }
+  
+  button {
+    font-size: 30px;
+    color: whitesmoke;
+    background-color: rgb(148, 17, 148);
+    border-radius: 500px;
+    &:active {
+      background-color: greenyellow;
+    }
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .btn-group ul li {
+    list-style: none;
+  }
+  
+  #q1-container .hide , 
+  #q2-container .hide, 
+  #q3-container .hide {
+    display: none;
+  }

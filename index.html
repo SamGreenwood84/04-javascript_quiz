@@ -19,14 +19,43 @@
               <!-- Question 1 -->
               <div id="q1-container" class="hide">
                 <h1>What function prints content to the console log in JavaScript?</h1>
+                <div class="btn-group" class="choices">
+                    <ul>
+                        <li><button>console.log()</button></li>
+                        <li><button>print()</button></li>
+                        <li><button>log.console()</button></li>
+                        <li><button>write.console()</button></li>
+                    </ul>
+                </div>
+                        <button id="nextBtn1">Next</button>
+                </div>
                 <!-- Question 2 -->
         <div id="q2-container" class="hide">
             <h1>How can you comment a single line in JavaScript?</h1>
+            <div class="btn-group" class="choices">
+                <ul>
+                    <li><button>** Comment **</button></li>
+                    <li><button>/* Comment */</button></li>
+                    <li><button>(!-- Comment --!)</button></li>
+                    <li><button>// Comment</button></li>
+                </ul>
+            </div>
+                     <button id="nextBtn2">Next</button>
+            </div>
                     <!-- Question 3 -->
         <div id="q3-container" class="hide">
             <h1>Which of the following is not a primitive data type in JavaScript?</h1>
-
-                    <!--Score Container-->
+            <div class="btn-group" class="choices">
+                <ul>
+                    <li><button>Number</button></li>
+                    <li><button>String</button></li>
+                    <li><button>Object</button></li>
+                    <li><button>Boolean</button></li>
+                </ul>
+            </div>
+                    <button id="nextBtn3">Next</button>
+            </div>
+            <!--Score Container-->
         <div id="final-container" class="hide">
             <form id="input-form">
                 <label for="initials">Enter your initials:</label>
@@ -36,7 +65,16 @@
                     name="initials"
                     maxlength="3"
                     required
-                />
+                /><!--Submits High Scores to local storage until refreshed-->
+                <button type="submit">Submit</button> 
+            </form> <!--Result div to display message-->
+            <div id="result"></div>
+        </div>
+        <div id="high-scores" class="hide">
+        </div> <!--Restart Quiz Button-->
+        <button id="restartQuizBtn">Try Again</button>
+        <!--Refresh High Scores Button-->
+        <button id="refreshScoresBtn">Refresh High Scores</button>
+    <script src="assets/js/script.js"></script>
 </body>
-<script src="assets/js/script.js"></script>
 </html>
