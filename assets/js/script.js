@@ -215,3 +215,21 @@ function displayHighScores() {
       refreshScoresBtn.classList.remove("hide");
     }
   }
+  //Function to end the quiz and result in a message
+  function endQuiz() {
+    finalContainer.classList.remove("hide");
+    clearInterval(timerInterval);
+  
+    if (correctCount >= 2) {
+      resultElement.textContent = `You Win! You answered ${correctCount} out of ${questions.length} correctly!`;
+    } else {
+      resultElement.textContent = `You Lose! You answered ${correctCount} out of ${questions.length} correctly!`;
+    }
+  }
+  //Function to callback the messages
+  function showAlert(message, callback, timeout = 500) {
+    alertElement = document.createElement("div");
+    alertElement.textContent = message;
+    document.body.appendChild(alertElement);
+  
+  }
