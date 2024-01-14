@@ -1,11 +1,12 @@
-# 04-javascript_quiz
-Web APIs Challenge: Code Quiz
+# **JavaScript Quiz**
 
-**User Story**
+**Web APIs Challenge: Code Quiz**
+
+***User Story***
 
 The USER wants to challenge their knowledge of Javascript by taking a short quiz and keeping track of scores to compare with peers
 
-**Acceptance Criteria**
+***Acceptance Criteria***
 
 THE USER is presented with a start container describing the quiz and rules
 
@@ -41,6 +42,8 @@ WHEN the USER clicks ![the "Submit" button](assets/images/submit-button.png) the
 
 THEN the **Top 10 scores** will be displayed
 
+![Alt text](assets/images/highscorescontainer-javascriptquiz.png)
+
 AND the USER will also be presented with !["Refresh Scores" button](assets/images/refresh-button.png) to clear the high scores
 
 IF the USER clicks !["Refresh Scores"](assets/images/refresh-button.png) the High Scores will reset
@@ -51,7 +54,7 @@ IF the USER clicks !["Try Again"](assets/images/tryagain-button.png) the start c
 
 WHEN the quiz restarts and the USER clicks the !["Start"](assets/images/start-button.png) button again the timer will start back at 45 seconds
 
-**References**
+# References
 
 References made to our school lessons **Module 4** and help with the Javascript structure by Tutor **David Elutilo**
 
