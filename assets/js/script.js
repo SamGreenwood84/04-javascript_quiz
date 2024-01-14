@@ -41,3 +41,18 @@ var questions = [
       correctAnswer: "Object",
     },
   ];
+
+//Quiz variables when before clickign the start button
+var currentQuestionIndex = 0;
+var timeLeft = 45;
+var correctCount = 0;
+var incorrectCount = 0;
+
+//Added Event listeners based on the html buttons
+startBtn.addEventListener("click", startQuiz);
+nextBtn1.addEventListener("click", moveToNextQuestion);
+nextBtn2.addEventListener("click", moveToNextQuestion);
+nextBtn3.addEventListener("click", showFinalContainer);
+inputForm.addEventListener("submit", handleFormSubmit);
+restartQuizBtn.addEventListener("click", resetQuiz);
+refreshScoresBtn.addEventListener("click", refreshScores);
