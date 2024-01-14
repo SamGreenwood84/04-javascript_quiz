@@ -10,6 +10,33 @@
         <!-- Added timer div -->
         <div>Time: <span id="timer">45</span> seconds</div>
         <!--Timer will deduct 15 seconds for each wrong answer-->
+        <!-- Added container divs -->
+    <div id="start-container">
+        <h2>Test your JavaScript knowledge in 3 questions...</h2> 
+          <p>Beware! A wrong answer loses you 15 seconds</p>
+          <button type="button" id="startBtn">Start</button>
+      </div>
+              <!-- Question 1 -->
+              <div id="q1-container" class="hide">
+                <h1>What function prints content to the console log in JavaScript?</h1>
+                <!-- Question 2 -->
+        <div id="q2-container" class="hide">
+            <h1>How can you comment a single line in JavaScript?</h1>
+                    <!-- Question 3 -->
+        <div id="q3-container" class="hide">
+            <h1>Which of the following is not a primitive data type in JavaScript?</h1>
+
+                    <!--Score Container-->
+        <div id="final-container" class="hide">
+            <form id="input-form">
+                <label for="initials">Enter your initials:</label>
+                <input
+                    type="text"
+                    id="initials"
+                    name="initials"
+                    maxlength="3"
+                    required
+                />
 </body>
 <script src="assets/js/script.js"></script>
 </html>
