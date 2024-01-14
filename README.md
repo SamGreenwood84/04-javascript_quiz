@@ -18,10 +18,10 @@ The USER wants to challenge their knowledge of Javascript by taking a short quiz
 
 
 
+**References**
 
-
-
-
+[clear messages function reference](https://stackoverflow.com/questions/34341462/element-declared-as-variable-vs-get-element?rq=3)
+![Alt text](<assets/images/clear messages function reference-stackoverflow.png>)
 
 [highscore to local storage reference](https://stackoverflow.com/questions/29370017/adding-a-high-score-to-local-storage)
 ![Alt text](<assets/images/highscore to local storage reference-stackoverflow.png>)
