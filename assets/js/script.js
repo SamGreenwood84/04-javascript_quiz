@@ -178,7 +178,20 @@ function startQuiz() {
   
     currentQuestionIndex = 0;
     timeLeft = 45;
-  }
+
+//Reset additional quiz variables to their initial values
+    clearInterval(timerInterval);
+    timerElement.textContent = timeLeft;
+    
+ //Reset the input field in the form
+    var initialsInput = document.querySelector("#initials");
+    initialsInput.value = "";
+
+    refreshScoresBtn.classList.add("hide");
+    restartQuizBtn.classList.add("hide");
+    highScoresContainer.classList.add("hide");
+    }
+  
   //Function to clear the correct and incorrect counts once the "Try again" button is clicked
   function clearCounts() {
     correctCount = 0;
