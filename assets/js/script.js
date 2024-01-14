@@ -17,3 +17,27 @@ var refreshScoresBtn = document.querySelector("#refreshScoresBtn")
 
 refreshScoresBtn.classList.add("hide");
 restartQuizBtn.classList.add("hide");
+
+var questions = [
+    {
+      question: "What function prints content to the console log in JavaScript?",
+      choices: ["console.log()", "print()", "log.console()", "write.console()"],
+      correctAnswer: "console.log()",
+    },
+    {
+      question: "How can you comment a single line in JavaScript?",
+      choices: [
+        "** Comment **",
+        "/* Comment */",
+        "(!-- Comment --!)",
+        "// Comment",
+      ],
+      correctAnswer: "// Comment",
+    },
+    {
+      question:
+        "Which of the following is not a primitive data type in JavaScript?",
+      choices: ["Number", "String", "Object", "Boolean"],
+      correctAnswer: "Object",
+    },
+  ];
