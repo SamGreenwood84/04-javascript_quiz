@@ -68,7 +68,7 @@ function startQuiz() {
   function startTimer() {
     timerInterval = setInterval(updateTimer, 1000);
   }
-  //Added function to show the next questions and choices once the series of next buttons are clicked
+  //Function to show the next questions and choices once the series of next buttons are clicked
   function showQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
     var currentQuestionContainer = document.querySelector(`#q${currentQuestionIndex + 1}-container`);
@@ -81,5 +81,16 @@ function startQuiz() {
     for (var i = 0; i < choiceButtons.length; i++) {
       choiceButtons[i].textContent = currentQuestion.choices[i];
       choiceButtons[i].addEventListener("click", handleChoiceClick);
+    }
+  }
+  //Function to move through the questions once the answers are chosen and the series of next buttons are clicked
+  function moveToNextQuestion() {
+    hideAllContainers();
+  
+    if (currentQuestionIndex < questions.length - 1) {
+      currentQuestionIndex++;
+      showQuestion();
+    } else {
+      endQuiz();
     }
   }
