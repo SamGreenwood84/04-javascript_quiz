@@ -143,3 +143,24 @@ function startQuiz() {
     var allContainers = [q1Container, q2Container, q3Container, finalContainer];
     allContainers.forEach((container) => container.classList.add("hide"));
   }
+  //Function to input initials and high score to local storage
+  function handleFormSubmit(event) {
+    event.preventDefault();
+  
+    var initialsInput = document.querySelector("#initials");
+    var userInitials = initialsInput.value;
+  
+    var userScore = timeLeft;
+    var userData = { initials: userInitials, score: userScore };
+    var userScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    userScores.push(userData);
+    localStorage.setItem("highScores", JSON.stringify(userScores));
+  
+    console.log("User Initials:", userInitials);
+    console.log("Score:", timeLeft);
+  
+    resultElement.textContent = `You answered ${correctCount} out of ${questions.length} correctly!`;
+    displayHighScores();
+    highScoresContainer.classList.remove("hide");
+  }
+  
