@@ -5,7 +5,7 @@ Web APIs Challenge: Code Quiz
 
 The USER wants to challenge their knowledge of Javascript by taking a short quiz and keeping track of scores
 
-
+**Acceptance Criteria**
 
 
 
